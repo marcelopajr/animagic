@@ -1,0 +1,77 @@
+{
+  "categorias": [
+    {
+      "titulo": "Pixar",
+      "link": "https://www.pixar.com/",
+      "cor": "#06d6a0",
+      "link_extra": {
+        "text": "História da Pixar",
+        "url": "https://www.pixar.com/our-story-pixar"
+      },
+      "videos": [
+        {
+          "titulo": "Como a Pixar Faz um Filme!",
+          "url": "https://youtu.be/zjxxl0F51K4"
+        },
+        {
+          "titulo": "Toy Story 4",
+          "url": "https://youtu.be/MUAaQJA5YkE"
+        },
+        {
+          "titulo": "Viva - A Vida é Uma Festa",
+          "url": "https://youtu.be/K3cL-o73GPU"
+        },
+        {
+          "titulo": "Divertida Mente",
+          "url": "https://youtu.be/ukQeR3zYncw"
+        }      
+      ]
+    },
+    {
+      "titulo": "Disney",
+      "link": "https://disney.com.br/",
+      "cor": "#f6bd60",
+      "link_extra": {
+        "text": "História da Disney",
+        "url": "https://d23.com/disney-history/"
+      },
+      "videos": [
+        {
+          "titulo": "Moana",
+          "url": "https://youtu.be/80q_uNi1Ip0"
+        },
+        {
+          "titulo": "Detona Ralph",
+          "url": "https://youtu.be/MsoG4LnjhL0"
+        },
+        {
+          "titulo": "Frozen: Uma Aventura Congelante",
+          "url": "https://youtu.be/EBEbqLvrf7w"
+        }
+      ]
+    },
+    {
+      "titulo": "Ghibli",
+      "link": "http://www.ghibli.jp/",
+      "cor": "#ef476f",
+      "link_extra": {
+        "text": "História da Ghibli",
+        "url": "https://studioghibli.com.br/studioghibli/"
+      },
+      "videos": [
+        {
+          "titulo": "A Viagem de Chihiro",
+          "url": "https://youtu.be/ByXuk9QqQkk"
+        },
+        {
+          "titulo": "Meu Amigo Totoro",
+          "url": "https://youtu.be/92a7Hj0ijLs"
+        },
+        {
+          "titulo": "O Castelo Animado",
+          "url": "https://youtu.be/iwROgK94zcM"
+        }
+      ]
+    }
+  ]
+}
