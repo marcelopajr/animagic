@@ -13,7 +13,7 @@ function Home() {
       <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"A animação sempre foi uma forma singular de contar histórias. Atualmente temos várias empresas que se destacam nesse ramo, porém quis catalogar as três maiores: Disney, Pixar e Ghibli. Veja ao lado um pouco mais sobre a trajetória da Pixar e como seus filmes são feitos para todas as idades. Vídeo por Gustavo Cruz."}
+        videoDescription={"A descoberta de um novo mundo vai te ensinar a viver a melhor versão de sua vida. Confira o trailer de Soul, nova animação da Disney/Pixar."}
       />
 
       <Carousel
