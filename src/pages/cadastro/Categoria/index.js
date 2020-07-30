@@ -30,7 +30,7 @@ function CadastroEstudio() {
 
   useEffect(() => {
     if (window.location.href.includes('localhost')) {
-      const URL = 'http://localhost:8080/estudios';
+      const URL = 'https://animagic.herokuapp.com/estudios';
       fetch(URL)
         .then(async (respostaDoServer) => {
           if (respostaDoServer.ok) {
