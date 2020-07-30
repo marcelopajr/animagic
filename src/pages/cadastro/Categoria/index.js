@@ -76,9 +76,8 @@ function CadastroEstudio() {
       </form>
 
       <ul>
-        {estudios.map((estudio, indice) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <li key={`${estudio}${indice}`}>
+        {estudios.map((estudio) => (
+          <li key={`${estudio.nome}`}>
             {estudio.nome}
           </li>
         ))}
