@@ -1,0 +1,10 @@
+{
+    "estudios": [
+        {
+            "id": 1,
+            "nome": "Pixar",
+            "descricao": "Melhor empresa de animação do mundo",
+            "cor": "#06d6a0"
+        }
+    ]
+}

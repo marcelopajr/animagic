@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../../components/Menu'
+import Menu from '../../components/Menu';
 import dadosIniciais from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
@@ -7,13 +7,18 @@ import Footer from '../../components/Footer';
 
 function Home() {
   return (
-    <div style={{ background: "#141414" }}>
+    <div style={{ background: '#141414' }}>
       <Menu />
 
       <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={<h1>A descoberta de um novo mundo vai te ensinar a viver a melhor versão de sua vida. Confira o trailer de Soul, nova animação da Disney/Pixar.</h1>}
+        videoDescription={(
+          <h1>
+            A descoberta de um novo mundo vai te ensinar a viver a melhor versão de sua vida.
+            Confira o trailer de Soul, nova animação da Disney/Pixar.
+          </h1>
+)}
       />
 
       <Carousel
