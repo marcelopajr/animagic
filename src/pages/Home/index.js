@@ -13,7 +13,7 @@ function Home() {
       <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"A descoberta de um novo mundo vai te ensinar a viver a melhor versão de sua vida. Confira o trailer de Soul, nova animação da Disney/Pixar."}
+        videoDescription={<h1>A descoberta de um novo mundo vai te ensinar a viver a melhor versão de sua vida. Confira o trailer de Soul, nova animação da Disney/Pixar.</h1>}
       />
 
       <Carousel
