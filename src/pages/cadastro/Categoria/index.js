@@ -4,14 +4,14 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 
-function CadastroEstudio() {
+function CadastroCategoria() {
   const valoresIniciais = {
     nome: '',
     descricao: '',
     cor: '',
   };
 
-  const [estudios, setEstudios] = useState([]);
+  const [categorias, setCategorias] = useState([]);
   const [values, setValues] = useState(valoresIniciais);
 
   function setValue(chave, valor) {
@@ -30,12 +30,12 @@ function CadastroEstudio() {
 
   useEffect(() => {
     const URL = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/estudios'
-      : 'https://animagic.herokuapp.com/estudios';
+      ? 'http://localhost:8080/categorias'
+      : 'https://animagic.herokuapp.com/categorias';
     fetch(URL)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
-        setEstudios([
+        setCategorias([
           ...resposta,
         ]);
       });
@@ -50,8 +50,8 @@ function CadastroEstudio() {
 
       <form onSubmit={function handleSubmit(infosDoEvento) {
         infosDoEvento.preventDefault();
-        setEstudios([
-          ...estudios,
+        setCategorias([
+          ...categorias,
           values,
         ]);
 
@@ -88,16 +88,16 @@ function CadastroEstudio() {
         </Button>
       </form>
 
-      {estudios.length === 0 && (
+      {categorias.length === 0 && (
         <div>
           Carregando...
         </div>
       )}
 
       <ul>
-        {estudios.map((estudio) => (
-          <li key={`${estudio.nome}`}>
-            {estudio.nome}
+        {categorias.map((categoria) => (
+          <li key={`${categoria.nome}`}>
+            {categoria.nome}
           </li>
         ))}
       </ul>
@@ -109,4 +109,4 @@ function CadastroEstudio() {
   );
 }
 
-export default CadastroEstudio;
+export default CadastroCategoria;
