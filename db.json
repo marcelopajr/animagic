@@ -1,10 +1,36 @@
 {
     "estudios": [
         {
-            "id": 1,
-            "nome": "Pixar",
-            "descricao": "Melhor empresa de animação do mundo",
-            "cor": "#06d6a0"
+          "id": 1,
+          "nome": "Pixar",
+          "cor": "#06d6a0",
+          "link_extra": {
+            "text": "História da Pixar",
+            "url": "https://www.pixar.com/our-story-pixar"
+          }
+        },
+        {
+          "id": 2,
+          "nome": "Disney",
+          "cor": "#f6bd60",
+          "link_extra": {
+            "text": "História da Disney",
+            "url": "https://d23.com/disney-history/"
+          }
+        }
+    ],
+    "videos": [
+        {
+          "id": 1,
+          "categoriaId": 1,
+          "nome": "Soul",
+          "url": "https://youtu.be/sgP9lzWzHpI"
+        },
+        {
+          "id": 2,
+          "categoriaId": 1,
+          "nome": "Dois Irmãos - Uma Jornada Fantástica",
+          "url": "https://youtu.be/2lb6JyCBBEI"
         }
     ]
 }

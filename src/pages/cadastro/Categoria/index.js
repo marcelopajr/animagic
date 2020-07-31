@@ -29,18 +29,16 @@ function CadastroEstudio() {
   }
 
   useEffect(() => {
-    if (window.location.href.includes('localhost')) {
-      const URL = 'https://animagic.herokuapp.com/estudios';
-      fetch(URL)
-        .then(async (respostaDoServer) => {
-          if (respostaDoServer.ok) {
-            const resposta = await respostaDoServer.json();
-            setEstudios(resposta);
-            return;
-          }
-          throw new Error('Não foi possível pegar os dados');
-        });
-    }
+    const URL = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/estudios'
+      : 'https://animagic.herokuapp.com/estudios';
+    fetch(URL)
+      .then(async (respostaDoServidor) => {
+        const resposta = await respostaDoServidor.json();
+        setEstudios([
+          ...resposta,
+        ]);
+      });
   }, []);
 
   return (
