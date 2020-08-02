@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import useForm from '../../../hooks/useForm';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import videosRepository from '../../../repositories/videos';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroVideo() {
   const history = useHistory();
+  const [categorias, setCategorias] = useState([]);
+  const categoryTitles = categorias.map(({ titulo }) => titulo);
   const { handleChange, values } = useForm({
-    titulo: 'Teste',
-    url: 'https://youtu.be/3Ec6aZjaZfI',
-    categoria: 'Disney',
+    titulo: 'As Memórias de Marnie',
+    url: 'https://youtu.be/jjmrxqcQdYg',
+    categoria: 'Ghibli',
   });
+
+  useEffect(() => {
+    categoriasRepository
+      .getAll()
+      .then((categoriasFromServer) => {
+        setCategorias(categoriasFromServer);
+      });
+  }, []);
 
   return (
     <PageDefault>
@@ -20,12 +31,15 @@ function CadastroVideo() {
 
       <form onSubmit={(event) => {
         event.preventDefault();
-        // alert('Vídeo cadastrado com sucesso!');
+        // alert('Video Cadastrado com sucesso!');
+
+        // eslint-disable-next-line max-len
+        const categoriaEscolhida = categorias.find((categoria) => categoria.titulo === values.categoria);
 
         videosRepository.create({
           titulo: values.titulo,
           url: values.url,
-          categoriaId: 2,
+          categoriaId: categoriaEscolhida.id,
         })
           .then(() => {
             console.log('Cadastro efetuado com sucesso!');
@@ -34,7 +48,7 @@ function CadastroVideo() {
       }}
       >
         <FormField
-          label="Nome do Vídeo"
+          label="Título do Vídeo"
           name="titulo"
           value={values.titulo}
           onChange={handleChange}
@@ -52,12 +66,16 @@ function CadastroVideo() {
           name="categoria"
           value={values.categoria}
           onChange={handleChange}
+          suggestions={categoryTitles}
         />
 
         <Button type="submit">
           Cadastrar
         </Button>
       </form>
+
+      <br />
+      <br />
 
       <Link to="/cadastro/categoria">
         Cadastrar Estúdio de Animação
